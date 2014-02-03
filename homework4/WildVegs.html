@@ -1,29 +1,102 @@
 <!DOCTYPE html>
 <!-- saved from url=(0085)http://www.teaching-materials.org/htmlcss-1day/lesson6/exercise_bootstrap_before.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Wild &amp; Wacky Vegetables</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
     <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="bootstrap.min.css" rel="stylesheet" media="screen">
+	<style> 
+		.col-lg-4
+		{
+			border:1px solid grey;
+			background-color:#E8E8E8;
+			margin-top:30px;
+		}
+		.zebra-striped
+		{
+			border:1px solid black;
+		}
+		
+		.head
+		{
+			border:1px solid black;
+			font-weight:bold;
+			background-color:#E8E8E8;
+		}
+		.cell
+		{
+			width: 100%;
+			height: 45px;
+			margin: 2px 2px 2px 2px;
+			border:1px solid black;
+		}
+
+	</style>	
   </head>
 
   <body>
-
-        <h1>Some Favorites</h1>
-        <ul>
-            <li><a href="http://www.teaching-materials.org/htmlcss-1day/lesson6/exercise_bootstrap_before.html#">Celery Root</a>
-            </li><li><a href="http://www.teaching-materials.org/htmlcss-1day/lesson6/exercise_bootstrap_before.html#">Spaghetti Squash</a>
-            </li><li><a href="http://www.teaching-materials.org/htmlcss-1day/lesson6/exercise_bootstrap_before.html#">Killer Mushrooms</a>
-        </li></ul>
-        
-        <h1>Wild &amp; Wacky Vegetables</h1>
-        <p>Kale courgette salsify mustard broccoli seakale wakame potato fava bean tigernut leek celery spinach avocado cabbage celtuce rutabaga kohlrabi. Parsnip pea soko groundnut bitterleaf spring onion. Grape dulse rutabaga lentil gram kakadu plum water spinach cabbage lotus root.
-        </p>
-        <p>
-        Mung bean quandong kale prairie turnip celery gram zucchini pumpkin green bean silver beet chard endive komatsuna eggplant kakadu plum radish broccoli. Arugula amaranth fennel wakame peanut garlic chickweed. Sorrel jícama quandong kale chickpea water chestnut rock melon aubergine lettuce pea azuki bean cress onion sea lettuce dandelion nori dulse rutabaga. Coriander napa cabbage bok choy carrot kakadu plum brussels sprout bamboo shoot salad okra cucumber garlic kombu beet greens cauliflower summer purslane. Artichoke daikon horseradish arugula taro catsear kombu rock melon pea sprouts collard greens mustard courgette lettuce soko maize plantain.
-        </p>
-
-  
+	<div class="container">
+	<div class="row">
+		<div class="col-lg-4">
+			<h1>Some Favorites</h1>
+			<ul>
+				<li><a href="http://www.teaching-materials.org/htmlcss-1day/lesson6/exercise_bootstrap_before.html#">Celery Root</a>
+				</li><li><a href="http://www.teaching-materials.org/htmlcss-1day/lesson6/exercise_bootstrap_before.html#">Spaghetti Squash</a>
+				</li><li><a href="http://www.teaching-materials.org/htmlcss-1day/lesson6/exercise_bootstrap_before.html#">Killer Mushrooms</a>
+				</li>
+			</ul>
+		<form class="well form-search">
+			<input type="text" class="input-medium search-query">
+			<button type="submit" class="btn">Search</button>
+		</form>	
+		</div> 
+		<div class="col-lg-8">
+			<h1>Wild &amp; Wacky Vegetables</h1>
+			
+			<blockquote>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+			<small>Jason Sanchez, February 2nd</small>
+			</blockquote>
+			
+			<table class="zebra-striped" width=500px height=100px>
+			<thead class="head">
+				<tr>
+					<th>City</th>
+					<th>Team</th>
+				</tr>
+			</thead>
+			<tbody> 
+				<tr class="cell">
+					<th>San Francisco</th>
+					<th>49ers</th>
+				</tr>
+				<tr class="cell">
+					<th>Seattle</th>
+					<th>Seahawks</th>
+				</tr>
+				<tr class="cell">
+					<th>Phoenix</th>
+					<th>Sunx</th>
+				</tr>
+				<tr class="cell">
+					<th>St. Louis</th>
+					<th>Rams</th>
+				</tr>	
+			</tbody>
+			</table>
+			
+			<p>Kale courgette salsify mustard broccoli seakale wakame potato fava bean tigernut leek celery spinach avocado cabbage celtuce rutabaga kohlrabi. Parsnip pea soko groundnut bitterleaf spring onion. Grape dulse rutabaga lentil gram kakadu plum water spinach cabbage lotus root.
+			</p>
+			<p>
+			Mung bean quandong kale prairie turnip celery gram zucchini pumpkin green bean silver beet chard endive komatsuna eggplant kakadu plum radish broccoli. Arugula amaranth fennel wakame peanut garlic chickweed. Sorrel jícama quandong kale chickpea water chestnut rock melon aubergine lettuce pea azuki bean cress onion sea lettuce dandelion nori dulse rutabaga. Coriander napa cabbage bok choy carrot kakadu plum brussels sprout bamboo shoot salad okra cucumber garlic kombu beet greens cauliflower summer purslane. Artichoke daikon horseradish arugula taro catsear kombu rock melon pea sprouts collard greens mustard courgette lettuce soko maize plantain.
+			</p>
+		</div>	
+	</div>
+	</div>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
 </body></html>
