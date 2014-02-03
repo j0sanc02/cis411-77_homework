@@ -14,6 +14,7 @@
 			border:1px solid grey;
 			background-color:#E8E8E8;
 			margin-top:30px;
+			list-style-type:none;
 		}
 		.zebra-striped
 		{
@@ -33,16 +34,27 @@
 			margin: 2px 2px 2px 2px;
 			border:1px solid black;
 		}
+		.alert
+		{
+			border:1px solid black;
+			background-color:pink;
+		}
+		.col-lg-3
+		{
+			border:1px solid gray;
+			list-style-type:none;
+		}
 
 	</style>	
   </head>
 
   <body>
+
 	<div class="container">
 	<div class="row">
 		<div class="col-lg-4">
 			<h1>Some Favorites</h1>
-			<ul>
+			<ul class="nav nav-pills nav-stacked">
 				<li><a href="http://www.teaching-materials.org/htmlcss-1day/lesson6/exercise_bootstrap_before.html#">Celery Root</a>
 				</li><li><a href="http://www.teaching-materials.org/htmlcss-1day/lesson6/exercise_bootstrap_before.html#">Spaghetti Squash</a>
 				</li><li><a href="http://www.teaching-materials.org/htmlcss-1day/lesson6/exercise_bootstrap_before.html#">Killer Mushrooms</a>
@@ -54,6 +66,10 @@
 		</form>	
 		</div> 
 		<div class="col-lg-8">
+			<div class="alert">
+				<a class="close" data-dismiss="alert">x</a>
+				<strong>Beware!</strong>These are some Wacky Vegetables!
+			</div>
 			<h1>Wild &amp; Wacky Vegetables</h1>
 			
 			<blockquote>
@@ -65,34 +81,54 @@
 			<thead class="head">
 				<tr>
 					<th>City</th>
-					<th>Team</th>
+					<th>Vegetable</th>
 				</tr>
 			</thead>
 			<tbody> 
 				<tr class="cell">
 					<th>San Francisco</th>
-					<th>49ers</th>
+					<th>Eggplant</th>
 				</tr>
 				<tr class="cell">
 					<th>Seattle</th>
-					<th>Seahawks</th>
+					<th>Onion</th>
 				</tr>
 				<tr class="cell">
 					<th>Phoenix</th>
-					<th>Sunx</th>
+					<th>Spinach</th>
 				</tr>
 				<tr class="cell">
 					<th>St. Louis</th>
-					<th>Rams</th>
+					<th>Corn</th>
 				</tr>	
 			</tbody>
 			</table>
+			</br>
+
+		<ul class="thumbnails">
+
+			<li class="col-lg-3">
+				<img src="eggplant.jpg" alt="eggplant" width="100" height="100"/>
+			</li>
+			<li class="col-lg-3">
+				<img src="onion.jpg" alt="onion" width="100" height="100"/>
+			</li>
+			<li class="col-lg-3">
+				<img src="spinach.jpg" alt="spinach" width="100" height="100"/>
+			</li>
+			<li class="col-lg-3">
+				<img src="corn.jpg" alt="corn" width="100" height=100"/>
+			</li>
 			
+		</ul>
+
+
 			<p>Kale courgette salsify mustard broccoli seakale wakame potato fava bean tigernut leek celery spinach avocado cabbage celtuce rutabaga kohlrabi. Parsnip pea soko groundnut bitterleaf spring onion. Grape dulse rutabaga lentil gram kakadu plum water spinach cabbage lotus root.
 			</p>
 			<p>
 			Mung bean quandong kale prairie turnip celery gram zucchini pumpkin green bean silver beet chard endive komatsuna eggplant kakadu plum radish broccoli. Arugula amaranth fennel wakame peanut garlic chickweed. Sorrel jícama quandong kale chickpea water chestnut rock melon aubergine lettuce pea azuki bean cress onion sea lettuce dandelion nori dulse rutabaga. Coriander napa cabbage bok choy carrot kakadu plum brussels sprout bamboo shoot salad okra cucumber garlic kombu beet greens cauliflower summer purslane. Artichoke daikon horseradish arugula taro catsear kombu rock melon pea sprouts collard greens mustard courgette lettuce soko maize plantain.
 			</p>
+	
 		</div>	
 	</div>
 	</div>
