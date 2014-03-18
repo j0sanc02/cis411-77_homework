@@ -5,6 +5,7 @@ namespace PetStore.Models
 {
     public class Animals
     {
+        public int ID { get; set; }
         public string name { get; set; }
         public string breed { get; set; }
         public DateTime DOB { get; set; }
