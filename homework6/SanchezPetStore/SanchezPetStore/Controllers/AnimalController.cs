@@ -15,10 +15,17 @@ namespace SanchezPetStore.Controllers
         private AnimalDBContext db = new AnimalDBContext();
 
         // GET: /Animal/
+        public ActionResult Inventory()
+        {
+            return View(db.Animal.ToList());
+        }
+        
         public ActionResult Index()
         {
             return View(db.Animal.ToList());
         }
+
+
 
         // GET: /Animal/Details/5
         public ActionResult Details(int? id)
