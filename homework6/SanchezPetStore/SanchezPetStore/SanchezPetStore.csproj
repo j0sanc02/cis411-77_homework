@@ -168,6 +168,10 @@
     <Compile Include="Migrations\201403190245284_InitialCreate.Designer.cs">
       <DependentUpon>201403190245284_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201403191735196_Imagepath.cs" />
+    <Compile Include="Migrations\201403191735196_Imagepath.Designer.cs">
+      <DependentUpon>201403191735196_Imagepath.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Animals.cs" />
@@ -242,6 +246,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201403190245284_InitialCreate.resx">
       <DependentUpon>201403190245284_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201403191735196_Imagepath.resx">
+      <DependentUpon>201403191735196_Imagepath.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

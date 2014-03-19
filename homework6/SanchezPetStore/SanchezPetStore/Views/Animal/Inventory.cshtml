@@ -10,8 +10,12 @@
 
 <h2>Inventory</h2>
 
+
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Imagepath)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
@@ -26,6 +30,10 @@
     {
         <tr>
             <td>
+                <img src="@Url.Content(item.Imagepath)"/>
+                @*@Html.DisplayFor(modelItem => item.Imagepath)*@
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
@@ -37,6 +45,7 @@
 
             </td>
         </tr>
+
     }
 
 </table>

@@ -9,6 +9,9 @@ namespace SanchezPetStore.Models
         
         public int ID { get; set; }
 
+        [Display(Name = "Image")]
+        public string Imagepath { get; set; }
+
         [Required]
         public string Name { get; set; }
 

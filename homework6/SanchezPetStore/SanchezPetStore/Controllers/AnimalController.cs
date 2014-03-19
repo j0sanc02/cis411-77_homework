@@ -53,7 +53,7 @@ namespace SanchezPetStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="ID,Name,Description,DateReceived,Quantity,Price")] Animals animals)
+        public ActionResult Create([Bind(Include="ID,Imagepath,Name,Description,DateReceived,Quantity,Price")] Animals animals)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace SanchezPetStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="ID,Name,Description,DateReceived,Quantity,Price")] Animals animals)
+        public ActionResult Edit([Bind(Include="ID,Imagepath,Name,Description,DateReceived,Quantity,Price")] Animals animals)
         {
             if (ModelState.IsValid)
             {
