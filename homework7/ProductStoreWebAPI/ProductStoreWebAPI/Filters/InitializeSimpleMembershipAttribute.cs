@@ -5,6 +5,7 @@ using System.Threading;
 using System.Web.Mvc;
 using WebMatrix.WebData;
 using ProductStoreWebAPI.Models;
+using System.Web.Security;
 
 namespace ProductStoreWebAPI.Filters
 {
@@ -44,6 +45,19 @@ namespace ProductStoreWebAPI.Filters
                 {
                     throw new InvalidOperationException("The ASP.NET Simple Membership database could not be initialized. For more information, please see http://go.microsoft.com/fwlink/?LinkId=256588", ex);
                 }
+                const string adminRole = "Administrator";
+                const string adminName = "Administrator";
+
+                if (!Roles.RoleExists(adminRole))
+                {
+                    Roles.CreateRole(adminRole);
+                }
+                if (!WebSecurity.UserExists(adminName))
+                {
+                    WebSecurity.CreateUserAndAccount(adminName, "password");
+                    Roles.AddUserToRole(adminName, adminRole);
+                }  
+
             }
         }
     }
