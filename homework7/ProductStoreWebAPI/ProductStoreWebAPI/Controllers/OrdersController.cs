@@ -20,7 +20,8 @@ namespace ProductStoreWebAPI.Controllers
         // GET api/Orders
         public IEnumerable<Order> GetOrders()
         {
-            return db.Orders.AsEnumerable();
+            return db.Orders.Where(o => o.Customer == User.Identity.Name);
+            //return db.Orders.AsEnumerable();
         }
 
         // GET api/Orders/5

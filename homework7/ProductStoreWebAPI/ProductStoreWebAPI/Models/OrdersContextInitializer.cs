@@ -23,7 +23,7 @@ namespace ProductStoreWebAPI.Models
             products.ForEach(p => context.ProductWebAPIs.Add(p));
             context.SaveChanges();
 
-            var order = new Order() { Customer = "Bob" };
+            var order = new Order() { Customer = "John" };
             var od = new List<OrderDetail>()
             {
                 new OrderDetail() { Product = products[0], Quantity = 2, Order = order},

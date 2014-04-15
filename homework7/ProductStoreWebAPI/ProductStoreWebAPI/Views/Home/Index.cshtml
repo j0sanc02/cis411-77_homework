@@ -79,21 +79,27 @@
         </table>
         <input type="button" data-bind="click: createOrder" value="Create Order" />
     </div>
-
+</div>
 <div id="orders-area" class="content">
     <!-- List of orders -->
     <div class="float-left">
         <h2>Your Orders</h2>
-        <ul id="orders"></ul>
+        <ul id="orders" data-bind="foreach: orders">
+            <li class="ui-widget-content">
+                <a href="#" data-bind="click: $root.getDetails">
+                    Order # <span data-bind="text: $data.Id"></span>
+                </a>
+            </li>
+        </ul>
     </div>
 
     <!-- Order Details -->
-    <h1>Your Orders</h1>
+
     <div id="order-details" class="float-right" data-bind="if: details()">
         <h2>Order #<span data-bind="text: details().Id"></span></h2>
         <table class="details ui-widget-content">
             <thead>
-                <tr><td>Item</td><td>Price</td><td>Quantity</td><td>Subtotal</td></tr>
+                <tr><td>Item</td><td>Price</td><td>Quantity</td></tr>
             </thead>
             <tbody data-bind="foreach: details().items">
                 <tr>
@@ -122,6 +128,7 @@
                 self.cart = ko.observableArray();
                 self.orders = ko.observableArray();
                 self.details = ko.observable();
+
                 function ProductViewModel(root, product) {
                     var self = this;
                     self.ProductId = product.Id;
@@ -186,7 +193,7 @@
                         }
                     });
                 };
-                function AppViewModel() {
+
                     // ...
 
                     // NEW CODE
@@ -198,7 +205,7 @@
                     });
 
                     $.getJSON("api/orders", self.orders);
-                };
+
             };
 
             $(document).ready(function () {

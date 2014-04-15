@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+
 
 namespace ProductStoreWebAPI.Models
 {
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
     public class ProductWebAPI
     {
         [ScaffoldColumn(false)]

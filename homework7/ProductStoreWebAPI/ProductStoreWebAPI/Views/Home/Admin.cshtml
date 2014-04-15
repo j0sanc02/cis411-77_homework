@@ -16,6 +16,7 @@
             self.products = ko.observableArray();
 
             var baseUri = '@ViewBag.ApiUrl';
+            $.getJSON(baseUri, self.products);
 
             self.create = function (formElement) {
                 // If the form data is valid, post the serialized form data to the web API.
